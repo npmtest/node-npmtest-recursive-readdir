@@ -1,7 +1,10 @@
-# test coverage for  [recursive-readdir (v2.1.1)](https://github.com/jergason/recursive-readdir#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-recursive-readdir.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-recursive-readdir) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-recursive-readdir.svg)](https://travis-ci.org/npmtest/node-npmtest-recursive-readdir)
+# npmtest-recursive-readdir
+
+#### test coverage for  [recursive-readdir (v2.1.1)](https://github.com/jergason/recursive-readdir#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-recursive-readdir.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-recursive-readdir) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-recursive-readdir.svg)](https://travis-ci.org/npmtest/node-npmtest-recursive-readdir)
+
 #### Get an array of all files in a directory and subdirectories.
 
-[![NPM](https://nodei.co/npm/recursive-readdir.png?downloads=true)](https://www.npmjs.com/package/recursive-readdir)
+[![NPM](https://nodei.co/npm/recursive-readdir.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/recursive-readdir)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-recursive-readdir/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-recursive-readdir/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-recursive-readdir/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-recursive-readdir/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-recursive-readdir/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-recursive-readdir/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-recursive-readdir/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-recursive-readdir/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-recursive-readdir%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-recursive-readdir/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-recursive-readdir/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-recursive-readdir%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.html](https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-recursive-readdir/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-recursive-readdir/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-recursive-readdir/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-recursive-readdir/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Jamison Dance",
-        "email": "jergason@gmail.com",
         "url": "http://jamisondance.com/"
     },
     "bugs": {
@@ -59,13 +67,11 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "jergason",
-            "email": "jergason@gmail.com"
+            "name": "jergason"
         }
     ],
     "name": "recursive-readdir",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/jergason/recursive-readdir.git"
