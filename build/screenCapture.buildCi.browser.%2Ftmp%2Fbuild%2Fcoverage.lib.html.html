@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-recursive-readdir/recursive-readdir/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-recursive-readdir/node_modules/recursive-readdir/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-recursive-readdir">npmtest-recursive-readdir (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-recursive-readdir/recursive-readdir/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-recursive-readdir/node_modules/recursive-readdir/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.89% <small>(7 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-recursive-readdir/recursive-readdir/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-recursive-readdir/node_modules/recursive-readdir/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -380,73 +378,73 @@
 var p = require('path')
 var minimatch = require('minimatch')
 &nbsp;
-<span class="fstat-no" title="function not covered" >function patternMatcher(pattern) {</span>
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function(path, stats) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var minimatcher = new minimatch.Minimatch(pattern, {matchBase: true})</span>
-<span class="cstat-no" title="statement not covered" >    return (!minimatcher.negate || stats.isFile()) &amp;&amp; minimatcher.match(path)</span>
+<span class="fstat-no" title="function not covered">function patternMatcher(pattern) {</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function(path, stats) {</span></span>
+<span class="cstat-no" title="statement not covered">    var minimatcher = new minimatch.Minimatch(pattern, {matchBase: true})</span>
+<span class="cstat-no" title="statement not covered">    return (!minimatcher.negate || stats.isFile()) &amp;&amp; minimatcher.match(path)</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function toMatcherFunction(ignoreEntry) {</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof ignoreEntry == 'function') {</span>
-<span class="cstat-no" title="statement not covered" >    return ignoreEntry</span>
+<span class="fstat-no" title="function not covered">function toMatcherFunction(ignoreEntry) {</span>
+<span class="cstat-no" title="statement not covered">  if (typeof ignoreEntry == 'function') {</span>
+<span class="cstat-no" title="statement not covered">    return ignoreEntry</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    return patternMatcher(ignoreEntry)</span>
+<span class="cstat-no" title="statement not covered">    return patternMatcher(ignoreEntry)</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function readdir(path, ignores, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof ignores == 'function') {</span>
-<span class="cstat-no" title="statement not covered" >    callback = ignores</span>
-<span class="cstat-no" title="statement not covered" >    ignores = []</span>
+<span class="fstat-no" title="function not covered">function readdir(path, ignores, callback) {</span>
+<span class="cstat-no" title="statement not covered">  if (typeof ignores == 'function') {</span>
+<span class="cstat-no" title="statement not covered">    callback = ignores</span>
+<span class="cstat-no" title="statement not covered">    ignores = []</span>
   }
-<span class="cstat-no" title="statement not covered" >  ignores = ignores.map(toMatcherFunction)</span>
+<span class="cstat-no" title="statement not covered">  ignores = ignores.map(toMatcherFunction)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var list = []</span>
+<span class="cstat-no" title="statement not covered">  var list = []</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  fs.readdir(path, <span class="fstat-no" title="function not covered" >function(err, files) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (err) {</span>
-<span class="cstat-no" title="statement not covered" >      return callback(err)</span>
+<span class="cstat-no" title="statement not covered">  fs.readdir(path, <span class="fstat-no" title="function not covered">function(err, files) {</span></span>
+<span class="cstat-no" title="statement not covered">    if (err) {</span>
+<span class="cstat-no" title="statement not covered">      return callback(err)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var pending = files.length</span>
-<span class="cstat-no" title="statement not covered" >    if (!pending) {</span>
+<span class="cstat-no" title="statement not covered">    var pending = files.length</span>
+<span class="cstat-no" title="statement not covered">    if (!pending) {</span>
       // we are done, woop woop
-<span class="cstat-no" title="statement not covered" >      return callback(null, list)</span>
+<span class="cstat-no" title="statement not covered">      return callback(null, list)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    files.forEach(<span class="fstat-no" title="function not covered" >function(file) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var filePath = p.join(path, file)</span>
-<span class="cstat-no" title="statement not covered" >      fs.stat(filePath, <span class="fstat-no" title="function not covered" >function(_err, stats) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (_err) {</span>
-<span class="cstat-no" title="statement not covered" >          return callback(_err)</span>
+<span class="cstat-no" title="statement not covered">    files.forEach(<span class="fstat-no" title="function not covered">function(file) {</span></span>
+<span class="cstat-no" title="statement not covered">      var filePath = p.join(path, file)</span>
+<span class="cstat-no" title="statement not covered">      fs.stat(filePath, <span class="fstat-no" title="function not covered">function(_err, stats) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (_err) {</span>
+<span class="cstat-no" title="statement not covered">          return callback(_err)</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (ignores.some(<span class="fstat-no" title="function not covered" >function(matcher) {</span> <span class="cstat-no" title="statement not covered" >return matcher(filePath, stats) }</span>)) {</span>
-<span class="cstat-no" title="statement not covered" >          pending -= 1</span>
-<span class="cstat-no" title="statement not covered" >          if (!pending) {</span>
-<span class="cstat-no" title="statement not covered" >            return callback(null, list)</span>
+<span class="cstat-no" title="statement not covered">        if (ignores.some(<span class="fstat-no" title="function not covered">function(matcher) {</span> <span class="cstat-no" title="statement not covered">return matcher(filePath, stats) }</span>)) {</span>
+<span class="cstat-no" title="statement not covered">          pending -= 1</span>
+<span class="cstat-no" title="statement not covered">          if (!pending) {</span>
+<span class="cstat-no" title="statement not covered">            return callback(null, list)</span>
           }
-<span class="cstat-no" title="statement not covered" >          return null</span>
+<span class="cstat-no" title="statement not covered">          return null</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (stats.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered" >          readdir(filePath, ignores, <span class="fstat-no" title="function not covered" >function(__err, res) {</span></span>
-<span class="cstat-no" title="statement not covered" >            if (__err) {</span>
-<span class="cstat-no" title="statement not covered" >              return callback(__err)</span>
+<span class="cstat-no" title="statement not covered">        if (stats.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered">          readdir(filePath, ignores, <span class="fstat-no" title="function not covered">function(__err, res) {</span></span>
+<span class="cstat-no" title="statement not covered">            if (__err) {</span>
+<span class="cstat-no" title="statement not covered">              return callback(__err)</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            list = list.concat(res)</span>
-<span class="cstat-no" title="statement not covered" >            pending -= 1</span>
-<span class="cstat-no" title="statement not covered" >            if (!pending) {</span>
-<span class="cstat-no" title="statement not covered" >              return callback(null, list)</span>
+<span class="cstat-no" title="statement not covered">            list = list.concat(res)</span>
+<span class="cstat-no" title="statement not covered">            pending -= 1</span>
+<span class="cstat-no" title="statement not covered">            if (!pending) {</span>
+<span class="cstat-no" title="statement not covered">              return callback(null, list)</span>
             }
           })
         } else {
-<span class="cstat-no" title="statement not covered" >          list.push(filePath)</span>
-<span class="cstat-no" title="statement not covered" >          pending -= 1</span>
-<span class="cstat-no" title="statement not covered" >          if (!pending) {</span>
-<span class="cstat-no" title="statement not covered" >            return callback(null, list)</span>
+<span class="cstat-no" title="statement not covered">          list.push(filePath)</span>
+<span class="cstat-no" title="statement not covered">          pending -= 1</span>
+<span class="cstat-no" title="statement not covered">          if (!pending) {</span>
+<span class="cstat-no" title="statement not covered">            return callback(null, list)</span>
           }
         }
 &nbsp;
@@ -458,10 +456,11 @@ var minimatch = require('minimatch')
 module.exports = readdir
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:35:13 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 04:53:54 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
